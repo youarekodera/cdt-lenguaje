@@ -1,0 +1,16 @@
+# Object-oriented programming in CodeTime
+
+object Person
+    property name as text
+    property age as number
+
+    create using name as text and age as number
+        set self name to name
+        set self age to age
+
+    action introduce
+        print "My name is {self name} and I am {self age} years old"
+
+start
+    let person = create Person using "Alice" and 25
+    person introduce

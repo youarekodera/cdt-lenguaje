@@ -1,0 +1,14 @@
+# Pattern matching in CodeTime
+
+start
+    let value = 2
+
+    choose value
+        case 1
+            print "One"
+        case 2
+            print "Two"
+        case 3
+            print "Three"
+        otherwise
+            print "Something else"

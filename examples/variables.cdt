@@ -1,0 +1,24 @@
+# Variable declarations in CodeTime
+
+start
+    # Variable with type annotation
+    let username as text = "Alice"
+    let age as number = 25
+    let active as boolean = true
+
+    # Type inference
+    let name = "CodeTime"
+    let version = 1
+    let enabled = true
+
+    # Mutable variable
+    let counter as number = 0
+    change counter to counter + 1
+
+    # Constant
+    fixed max_users as number = 1000
+
+    print "Username: {username}"
+    print "Age: {age}"
+    print "Active: {active}"
+    print "Counter: {counter}"

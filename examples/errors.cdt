@@ -1,0 +1,18 @@
+# Error handling in CodeTime
+
+define divide using a as number and b as number
+    when b = 0
+        raise "Division by zero"
+    otherwise
+        give a / b
+
+start
+    attempt
+        let result = divide using 10 and 2
+        print "Result: {result}"
+
+        let error_result = divide using 10 and 0
+        print error_result
+
+    recover error
+        print "Error occurred"

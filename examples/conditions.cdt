@@ -1,0 +1,18 @@
+# Conditional statements in CodeTime
+
+start
+    let temperature = 25
+
+    when temperature > 30
+        print "It is hot"
+    otherwise when temperature > 20
+        print "It is warm"
+    otherwise
+        print "It is cold"
+
+    let age = 18
+
+    when age >= 18
+        print "You are an adult"
+    otherwise
+        print "You are a minor"

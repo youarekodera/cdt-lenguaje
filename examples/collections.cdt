@@ -1,0 +1,22 @@
+# Collections in CodeTime
+
+start
+    # Lists
+    let names = ["Alice", "Bob", "Charlie"]
+    print "First name: {names at 0}"
+
+    names add "David"
+    print "After adding David: {names}"
+
+    names remove "Bob"
+    print "After removing Bob: {names}"
+
+    # Maps
+    let user = {
+        name: "Alice"
+        age: 25
+        active: true
+    }
+
+    print "User name: {user name}"
+    print "User age: {user age}"

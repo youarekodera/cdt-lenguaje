@@ -1,0 +1,67 @@
+# Comprehensive example demonstrating multiple CodeTime features
+
+use math
+
+# Function with multiple parameters
+define calculate_area using width as number and height as number
+    give width * height
+
+# Object with properties and actions
+object Rectangle
+    property width as number
+    property height as number
+
+    create using width as number and height as number
+        set self width to width
+        set self height to height
+
+    action area
+        give self width * self height
+
+    action perimeter
+        give 2 * (self width + self height)
+
+start
+    # Variables with different types
+    let name = "CodeTime"
+    let version = 1
+    let is_stable = true
+
+    print "Welcome to {name} v{version}"
+
+    # Conditional logic
+    when is_stable
+        print "This is a stable release"
+    otherwise
+        print "This is a development release"
+
+    # Loop
+    repeat i from 1 until 5
+        print "Count: {i}"
+
+    # Function call
+    let area = calculate_area using 10 and 20
+    print "Area: {area}"
+
+    # Object instantiation
+    let rect = create Rectangle using 15 and 25
+    let rect_area = rect area
+    let rect_perimeter = rect perimeter
+
+    print "Rectangle area: {rect_area}"
+    print "Rectangle perimeter: {rect_perimeter}"
+
+    # List operations
+    let numbers = [1, 2, 3, 4, 5]
+    numbers add 6
+    print "Numbers: {numbers}"
+
+    # Map operations
+    let config = {
+        debug: true
+        port: 8080
+        host: "localhost"
+    }
+
+    print "Config host: {config host}"
+    print "Config port: {config port}"

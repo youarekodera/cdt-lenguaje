@@ -1,0 +1,17 @@
+# Loop statements in CodeTime
+
+start
+    # Repeat loop
+    repeat number from 1 until 5
+        print "Iteration {number}"
+
+    # While loop
+    let counter = 0
+    while counter < 3
+        print "Counter: {counter}"
+        change counter to counter + 1
+
+    # For each loop
+    let names = ["Alice", "Bob", "Charlie"]
+    for each name inside names
+        print "Hello, {name}"

@@ -1,0 +1,25 @@
+# Function definitions in CodeTime
+
+# Simple function
+define greet using name as text
+    print "Hello, {name}!"
+
+# Function with return value
+define add using a as number and b as number
+    give a + b
+
+# Function with calculation
+define calculate using value as number
+    give value * 2
+
+start
+    let name = "CodeTime"
+    let number = 21
+
+    greet using name
+
+    let result = add using 10 and 20
+    print "10 + 20 = {result}"
+
+    let doubled = calculate using number
+    print "{number} * 2 = {doubled}"
