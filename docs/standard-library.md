@@ -1,5 +1,7 @@
 # CodeTime Standard Library
 
+> **Navigation:** [Documentation Index](README.md) · [Language Spec](language.md) · [Syntax Reference](syntax.md) · [Standard Library](standard-library.md) · [Learning Guide](learning-guide.md)
+
 ## Overview
 
 The CodeTime standard library provides comprehensive modules for common programming tasks. All modules are imported using the `use` keyword.

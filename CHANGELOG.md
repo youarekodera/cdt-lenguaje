@@ -1,83 +1,107 @@
-# CodeTime — Notas de la versión 0.0.1 (primera versión)
+# CodeTime Changelog
 
-> Primera versión pública del lenguaje CodeTime.  
-> Fuente única real: `CODETIME_LEARNING_GUIDE.txt`.
+All notable changes to the CodeTime language are documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
-## Esta versión 0.0.1 tiene
+## [v0.0.1] - First Public Release
 
-### Agregado — Archivos y estructura del programa
-- Extensión de archivo **`.cdt`**.
-- Punto de entrada **`start`**.
-- Bloques definidos por **indentación** (sin llaves `{ }` y sin `;`).
-- Comentarios de una línea `#` y multilínea `### … ###`.
-- Declaración de módulo `module nombre` (opcional).
-- Importaciones `use nombre_modulo` (opcional).
+> Original single source of truth: `CODETIME_LEARNING_GUIDE.md` (now
+> `docs/learning-guide.md`). See [Learning Guide](docs/learning-guide.md)
+> for the full tutorial.
 
-Ejemplo mínimo (cómo se crea el archivo):
+## What v0.0.1 includes
+
+### Added — Files and Program Structure
+
+- File extension **`.cdt`**.
+- Entry point **`start`**.
+- Blocks defined by **indentation** (no `{ }` braces, no `;`).
+- Single-line comments `#` and multi-line comments `### … ###`.
+- Optional module declaration `module name`.
+- Optional imports `use module_name`.
+
+Minimal example:
 
 ```codetime
 start
-    print "¡Hola, CodeTime!"
+    print "Hello, CodeTime!"
 ```
 
-### Agregado — Tipos de datos
-- Primitivos: `number`, `decimal`, `text`, `character`, `boolean`, `nothing`.
-- Colecciones: `list` (secuencia ordenada), `map` (clave-valor).
-- Tipos opcionales: `maybe T` y `exists`.
-- Genéricos sobre objetos: `object X of T`.
+### Added — Data Types
 
-### Agregado — Variables
-- `let` con inferencia o con anotación: `let x as T = …`
-- Variables mutables: `change x to …`
-- Constantes: `fixed`
+- Primitives: `number`, `decimal`, `text`, `character`, `boolean`, `nothing`.
+- Collections: `list` (ordered sequence), `map` (key-value).
+- Optional types: `maybe T` and `exists`.
+- Generics over objects: `object X of T`.
 
-### Agregado — Operadores
-- Aritméticos: `+ - * / % **`
-- Comparación: `== != < <= > >=`
-- Lógicos: `and or not`
+### Added — Variables
 
-### Agregado — Control de flujo
+- `let` with inference or annotation: `let x as T = …`
+- Mutable variables: `change x to …`
+- Constants: `fixed`
+
+### Added — Operators
+
+- Arithmetic: `+ - * / % **`
+- Comparison: `== != < <= > >=`
+- Logical: `and or not`
+
+### Added — Control Flow
+
 - `when / otherwise when / otherwise`
 - `repeat i from … until …`
 - `for each … inside …`
 - `while …`
 
-### Agregado — Funciones
-- Definición: `define nombre using param as T …`
-- Retorno: `give`
-- Procedimientos (sin retorno)
+### Added — Functions
 
-### Agregado — Objetos
+- Definition: `define name using param as T …`
+- Return: `give`
+- Procedures (no return value)
+
+### Added — Objects
+
 - `object`, `property`, `create`, `action`, `self`, `set`
-- Constructores: `create using …`
+- Constructors: `create using …`
 
-### Agregado — Contratos (interfaces)
-- `contract` y `object … follows …`
+### Added — Contracts (Interfaces)
 
-### Agregado — Enumeraciones
-- `choice Nombre` con constructores `Nombre X`
+- `contract` and `object … follows …`
 
-### Agregado — Manejo de errores
-- Captura: `attempt … recover error …`
-- Lanzado: `raise "mensaje"`
+### Added — Enumerations
 
-### Agregado — Pattern matching
+- `choice Name` with constructors `Name value`
+
+### Added — Error Handling
+
+- Capture: `attempt … recover error …`
+- Raise: `raise "message"`
+
+### Added — Pattern Matching
+
 - `choose … case … otherwise`
 
-### Agregado — Strings
-- Interpolación: `"Texto {variable}"`
-- Strings multilínea: `"""…"""`
+### Added — Strings
 
-### Agregado — Compilación y comandos
+- Interpolation: `"Text {variable}"`
+- Multiline strings: `"""…"""`
+
+### Added — Compilation and Commands
+
 - `codetime help`
 - `codetime version`
-- `codetime check archivo.cdt`
-- `codetime build archivo.cdt`
-- `codetime run archivo.cdt`
+- `codetime check file.cdt`
+- `codetime build file.cdt`
+- `codetime run file.cdt`
 
-## No incluido en 0.0.1 (próximamente)
+## Not Included in v0.0.1 (Coming Soon)
 
-> La spec en inglés en `docs/` menciona algunas cosas que **aún no existen** en esta versión:
-> - **Funciones anónimas / lambdas (`=>`)**: el parser responde *"Lambda expressions not yet implemented"*.
-> - **Tipos de colecciones parametrizados** (`list of text`, `map of …`, `set of …`): no los reconoce el parser.
-> - **Módulos de la biblioteca estándar concretos** (`math`, `text`, `files`, …): `use` se reconoce pero no resuelve ninguno.
+> The English spec in `docs/` mentions some features that **do not yet
+> exist** in this version:
+>
+> - **Anonymous functions / lambdas (`=>`)**: the parser responds *"Lambda
+>   expressions not yet implemented"*.
+> - **Parametrized collection types** (`list of text`, `map of …`,
+>   `set of …`): not recognized by the parser.
+> - **Concrete standard-library modules** (`math`, `text`, `files`, …):
+>   `use` is recognized but none are resolved.

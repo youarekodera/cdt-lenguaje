@@ -1,5 +1,7 @@
 # CodeTime Syntax Reference
 
+> **Navigation:** [Documentation Index](README.md) · [Language Spec](language.md) · [Syntax Reference](syntax.md) · [Standard Library](standard-library.md) · [Learning Guide](learning-guide.md)
+
 ## Lexical Structure
 
 ### Identifiers

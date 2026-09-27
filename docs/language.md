@@ -1,5 +1,7 @@
 # CodeTime Language Specification
 
+> **Navigation:** [Documentation Index](README.md) · [Language Spec](language.md) · [Syntax Reference](syntax.md) · [Standard Library](standard-library.md) · [Learning Guide](learning-guide.md)
+
 ## Overview
 
 CodeTime is a modern, high-level programming language designed for readability, simplicity, and expressiveness. It features clean English-based syntax, strong static typing, and compiles to native code via C.

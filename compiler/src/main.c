@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define VERSION "1.0.0"
+#define VERSION "0.0.1"
 
 void print_usage(const char* program_name) {
     printf("CodeTime Compiler v%s\n", VERSION);
